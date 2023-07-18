@@ -50,7 +50,7 @@ final class MaskUtil
     {
         $penalty = 0;
         //$array = $matrix->getArray();
-        $array = array_map(function ($value) { return (array)$value; }, (array)$matrix->getArray());
+        $array = array_map(function ($value) { return (array)$value; }, (array)$matrix->getArray());  // SplFixedArray to array - there is probably bug in PHP 8.0 - 8.2+  - this is workaround
         $width = $matrix->getWidth();
         $height = $matrix->getHeight();
 
