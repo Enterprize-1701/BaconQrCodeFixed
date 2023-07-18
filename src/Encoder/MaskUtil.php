@@ -49,7 +49,8 @@ final class MaskUtil
     public static function applyMaskPenaltyRule2(ByteMatrix $matrix) : int
     {
         $penalty = 0;
-        $array = $matrix->getArray();
+        //$array = $matrix->getArray();
+        $array = array_map(function ($value) { return (array)$value; }, (array)$matrix->getArray());
         $width = $matrix->getWidth();
         $height = $matrix->getHeight();
 
